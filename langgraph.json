@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./src/language_agent.py:language_workflow"
+  },
+  "env": ".env"
+}
