@@ -1,10 +1,10 @@
-# Language learning
+# Language learning LangChain agent
 
-This repo contains **two layers** of LangChain / LangGraph code:
+This is a small demo showcasing the integration of LangChain 1.0 agents with LangGraph Graph API. The demo contains **two layers** of LangChain / LangGraph code:
 
-1. **`conversational_agent`**: a chat agent that talks to the learner in English (then optionally in the target language), records **name**, **CEFR level**, and **target language**, and can call the `language_workflow` as a tool, to generate learning material on demand (text to read or grammar exercises). The agent is implemented as a LangChain 1.0 agent in `conversational_agent.py`
+1. **`conversational_agent`**: a LangChain 1.0 chat agent that talks to the learner in English (then optionally in the target language), records **name**, **CEFR level**, and **target language**, and can call the `language_workflow` as a tool, to generate learning material on demand (text to read or grammar exercises). The agent is implemented as a LangChain 1.0 agent in `conversational_agent.py`
 
-2. **`language_workflow`**: a **router graph** workflow that generates learning material matching the input preferences. Inputs are:
+2. **`language_workflow`**: a LangGraph **router graph** workflow that generates learning material matching the input preferences. Inputs are:
     - `user_message`: the messaege of the user specifying what material he wants.
     - `user_level`: the proficiency level of the user, as  **CEFR** level (A1–C2)
     - `target_language`: the language the user wants to learn. Supported languages: English, Spanish, French, German, Italian
